@@ -1,5 +1,5 @@
 ![logo](http://img.hhlmy.xyz/Work/Web%20Head/img-160X160.png)
-# 从零开始学习 AE 
+# 一鸣教你从零开始学习 AE 
 ## Adobe AE 入门学习指南
 > 你可以获得
 
