@@ -7,7 +7,7 @@
 * 了解并掌握 Adobe AE 常用功能
 * 了解 Adobe AE 常用插件、表达式
 
-[快速开始](https://github.com/docsifyjs/docsify/)
+[快速开始](https://mkdjojo.github.io/Doc-Ae-Lv1/#/)
 [关于AE](About_AE)
 [资料下载](download)
 
