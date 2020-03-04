@@ -1,15 +1,15 @@
 ![logo](http://img.hhlmy.xyz/Work/Web%20Head/img-160X160.png)
 # 从零开始学习 AE 
-## Adobe AE 学习资料大纲
-> 
+## Adobe AE 入门学习指南
+> 你可以获得
 
-* AE 基础入门知识掌握
-* AE 插件引用下载
-* AE 表达式，代码指令合集
+* 快速 Adobe AE 基础知识入门
+* 了解并掌握 Adobe AE 常用功能
+* 了解 Adobe AE 常用插件、表达式
 
-[我的博客](https://github.com/docsifyjs/docsify/)
-[了解AE](/)
-[软件下载](download)
+[快速开始](https://github.com/docsifyjs/docsify/)
+[关于AE](About_AE)
+[资料下载](download)
 
 <!-- 背景色 -->
 ![](http://img.hhlmy.xyz/Work/Other/IMG-HQ-022.jpg)
