@@ -56,7 +56,22 @@
       }
       //目录名称
       name: 'AE 入门学习手册',
+      //头标角标
+      plugins: [
+        function (hook, vm) {
+          hook.beforeEach(function (html) {
+            if (/githubusercontent\.com/.test(vm.route.file)) {
+              url = vm.route.file
+                .replace('raw.githubusercontent.com', 'github.com')
+                .replace(/\/master/, '/blob/master')
+            } else {
+              url = 'https://github.com/MKDJOJO/doc-n1' + vm.route.file
+            }
+            var editHtml = '[:memo: 编辑文档](' + url + ')\n'
 
+          }
+        }
+      ]
     }
   </script>
   <script src="//unpkg.com/docsify-copy-code"></script>
