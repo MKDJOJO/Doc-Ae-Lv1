@@ -1,80 +1,78 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>AE 学习手册</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="//unpkg.com/docsify/themes/vue.css" />
+  </head>
 
-<head>
-
-  <meta charset="UTF-8">
-  <title>AE 学习手册</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="//unpkg.com/docsify/themes/vue.css">
-
-</head>
-
-<body>
-  <div id="app">
-    缓冲中...
-  </div>
-  <script>
-    window.$docsify = {
-      //切换页面后是否自动跳转到页面顶部
-      auto2top: true,
-      //启用封面页。开启后是加载 _coverpage.md 文件，也可以自定义文件名。
-      coverpage: true,
-      //执行文档里的 script 标签里的脚本，只执行第一个 script (demo)。 如果 Vue 存在，则自动开启。
-      executeScript: true,
-      //加载自定义侧边栏，参考多页文档。设置为 true 后会加载 _sidebar.md 文件，也可以自定义加载的文件名。
-      loadSidebar: true,
-      //加载自定义导航栏，参考定制导航栏 了解用法。设置为 true 后会加载 _navbar.md 文件，也可以自定义加载的文件名。
-      loadNavbar: true,
-      //小屏设备下合并导航栏到侧边栏。
-      mergeNavbar: true,
-      //默认情况下会抓取文档中所有标题渲染成目录，可配置最大支持渲染的标题层级。
-      maxLevel: 3,
-      //自定义侧边栏后默认不会再生成目录，你也可以通过设置生成目录的最大层级开启这个功能。
-      subMaxLevel: 2,
-      //全文搜索插件会根据当前页面上的超链接获取文档内容，
-      search: 'auto',
-      search: {
-        noData: {
-          '/': '没有结果!'
+  <body>
+    <div id="app">
+      缓冲中...
+    </div>
+    <script>
+      window.$docsify = {
+        //切换页面后是否自动跳转到页面顶部
+        auto2top: true,
+        //启用封面页。开启后是加载 _coverpage.md 文件，也可以自定义文件名。
+        coverpage: true,
+        //执行文档里的 script 标签里的脚本，只执行第一个 script (demo)。 如果 Vue 存在，则自动开启。
+        executeScript: true,
+        //加载自定义侧边栏，参考多页文档。设置为 true 后会加载 _sidebar.md 文件，也可以自定义加载的文件名。
+        loadSidebar: true,
+        //加载自定义导航栏，参考定制导航栏 了解用法。设置为 true 后会加载 _navbar.md 文件，也可以自定义加载的文件名。
+        loadNavbar: true,
+        //小屏设备下合并导航栏到侧边栏。
+        mergeNavbar: true,
+        //默认情况下会抓取文档中所有标题渲染成目录，可配置最大支持渲染的标题层级。
+        maxLevel: 3,
+        //自定义侧边栏后默认不会再生成目录，你也可以通过设置生成目录的最大层级开启这个功能。
+        subMaxLevel: 2,
+        //全文搜索插件会根据当前页面上的超链接获取文档内容，
+        search: 'auto',
+        search: {
+          noData: {
+            '/': '没有结果!'
+          },
+          paths: 'auto',
+          placeholder: {
+            '/': '搜索'
+          }
         },
-        paths: 'auto',
-        placeholder: {
-          '/': '搜索'
-        }
-      },
-      //我们可以通过 {docsify-updated} 变量显示文档更新日期. 
-      formatUpdated: '{MM}/{DD} {HH}:{mm}',
-      //目录名称
-      name: 'AE 学习手册',
-      //头标角标
-      plugins: [
-        function (hook, vm) {
-          hook.beforeEach(function (html) {
-            if (/githubusercontent\.com/.test(vm.route.file)) {
-              url = vm.route.file
-                .replace('raw.githubusercontent.com', 'github.com')
-                .replace(/\/master/, '/blob/master')
-            } else {
-              url = 'https://github.com/MKDJOJO/doc-n1' + vm.route.file
-            }
-            var editHtml = '[:memo: 编辑文档](' + url + ')\n'
+        //我们可以通过 {docsify-updated} 变量显示文档更新日期.
+        formatUpdated: '{MM}/{DD} {HH}:{mm}',
+        //目录名称
+        name: 'AE 学习手册',
+        //头标角标
+        plugins: [
+          function(hook, vm) {
+            hook.beforeEach(function(html) {
+              if (/githubusercontent\.com/.test(vm.route.file)) {
+                url = vm.route.file
+                  .replace('raw.githubusercontent.com', 'github.com')
+                  .replace(/\/master/, '/blob/master')
+              } else {
+                url = 'https://github.com/MKDJOJO/Doc-AE-Lv1' + vm.route.file
+              }
+              var editHtml = '[:memo: 编辑文档](' + url + ')\n'
 
-            return editHtml
-              + html
-              + '\n\n----\n\n'
-              + '<a href="http://CCTV.com" target="_blank" style="color: inherit; font-weight: normal; text-decoration: none;">荣幸引用 docsify</a>'
-          })
-        },
-      ]
-    }
-  </script>
-  <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
-  <script src="//unpkg.com/docsify-copy-code"></script>
-  <script src="//unpkg.com/docsify/lib/plugins/zoom-image.js"></script>
-  <script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
-</body>
-
+              return (
+                editHtml +
+                html +
+                '\n\n----\n\n' +
+                '<a href="https://github.com/MKDJOJO" target="_blank" style="color: inherit; font-weight: normal; text-decoration: none;">荣幸引用 docsify</a>'
+              )
+            })
+          }
+        ]
+      }
+    </script>
+    <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+    <script src="//unpkg.com/docsify-copy-code"></script>
+    <script src="//unpkg.com/docsify/lib/plugins/zoom-image.js"></script>
+    <script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
+  </body>
 </html>
